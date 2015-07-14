@@ -1137,7 +1137,7 @@ The synopsis for the
 command is:
 .Bl -tag -width Ds
 .It Xo Ic copy-mode
-.Op Fl Mu
+.Op Fl Meu
 .Op Fl t Ar target-pane
 .Xc
 Enter copy mode.
@@ -1147,6 +1147,9 @@ option scrolls one page up.
 .Fl M
 begins a mouse drag (only valid if bound to a mouse key binding, see
 .Sx MOUSE SUPPORT ) .
+.Fl e
+causes copy-mode to exit when scrolling to the end of the history and
+there is no current selection.
 .El
 .Pp
 Each window displayed by
