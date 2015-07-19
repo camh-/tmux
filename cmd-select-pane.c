@@ -145,6 +145,7 @@ cmd_select_pane_exec(struct cmd *self, struct cmd_q *cmdq)
 	if (window_set_active_pane(wl->window, wp)) {
 		server_status_window(wl->window);
 		server_redraw_window_borders(wl->window);
+		server_redraw_window(wl->window);
 	}
 
 	return (CMD_RETURN_NORMAL);
